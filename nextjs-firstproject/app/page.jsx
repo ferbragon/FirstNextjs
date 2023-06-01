@@ -1,4 +1,5 @@
 import React from "react";
+import Users from "@/components/Users";
 
 async function fetchUsers() {
     const res = await fetch("https://reqres.in/api/users");
@@ -13,19 +14,7 @@ async function indexPage() {
   return(
     <div>
       <h1>Index Page</h1>
-        <ul>
-          {
-            users.map((user, index) => (
-              <li key={index}>
-                <div>
-                  <h5>{user.id}</h5>
-                  <p>{user.email}</p>
-                </div>
-                <img src={user.avatar} alt={user.email} />
-              </li>
-            ))
-          }
-        </ul>
+        <Users users={users}/>
     </div>
   )
 }
