@@ -12,10 +12,7 @@ async function indexPage() {
   const users = await fetchUsers();
   console.log(users);
   return(
-    <div>
-      <h1>Index Page</h1>
-        <Users users={users}/>
-    </div>
+        <Users users={users} />
   )
 }
 
